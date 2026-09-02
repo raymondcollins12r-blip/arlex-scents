@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#fffaf3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#150b0d" media="(prefers-color-scheme: dark)">
 
-<title>Arlex Scents | Long-Lasting Oil-Based Inspired Fragrances, Alberton</title>
-<meta name="description" content="Find your signature scent at Arlex Scents — long-lasting, affordable oil-based inspired fragrances. Visit us at Lemontree Mall, Alberton, or chat to Thembie on WhatsApp.">
+<title>Arlex Scents | Long-Lasting Oil-Based Inspired Fragrances — Alberton &amp; Johannesburg South</title>
+<meta name="description" content="Find your signature scent at Arlex Scents — long-lasting, affordable oil-based inspired fragrances since 1992. Visit us in Alberton or Johannesburg South, or chat to Thembie on WhatsApp.">
 <meta name="author" content="Arlex Scents">
 <link rel="canonical" href="https://raymondcollins12r-blip.github.io/arlex-scents/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b1719'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-style='italic' text-anchor='middle' fill='%23fffaf3'%3EA%3C/text%3E%3C/svg%3E">
@@ -17,12 +17,12 @@
 <meta property="og:site_name" content="Arlex Scents">
 <meta property="og:locale" content="en_ZA">
 <meta property="og:title" content="Arlex Scents | Find the scent that feels like you">
-<meta property="og:description" content="Long-lasting, affordable oil-based inspired fragrances with personal guidance. Lemontree Mall, Alberton.">
+<meta property="og:description" content="Long-lasting, affordable oil-based inspired fragrances with personal guidance, since 1992. Alberton &amp; Johannesburg South.">
 <meta property="og:url" content="https://raymondcollins12r-blip.github.io/arlex-scents/">
 <meta property="og:image" content="https://raymondcollins12r-blip.github.io/arlex-scents/social-preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Arlex Scents — find your signature scent. Long-lasting, affordable oil-based inspired fragrances, Lemontree Mall, Alberton.">
+<meta property="og:image:alt" content="Arlex Scents — find your signature scent. Long-lasting, affordable oil-based inspired fragrances, Alberton and Johannesburg South.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Arlex Scents">
 <meta name="twitter:description" content="Oil-based inspired fragrances in Alberton. Chat to Thembie on WhatsApp.">
@@ -36,23 +36,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Arlex Scents",
-  "description": "Long-lasting, affordable oil-based inspired fragrances for men and women, with personal guidance.",
-  "telephone": "+27734338607",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Alberton",
-    "addressRegion": "Gauteng",
-    "addressCountry": "ZA"
-  },
-  "sameAs": ["https://www.facebook.com/arlexperfumesonlineshop/"]
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://raymondcollins12r-blip.github.io/arlex-scents/#org",
+      "name": "Arlex Scents",
+      "description": "Independent South African manufacturer and retailer of long-lasting, affordable oil-based upmarket generic fragrances, sold under the Arlex name.",
+      "foundingDate": "1992",
+      "telephone": "+27734338607",
+      "email": "Arlexpro@gmail.com",
+      "url": "https://raymondcollins12r-blip.github.io/arlex-scents/",
+      "sameAs": ["https://www.facebook.com/arlexperfumesonlineshop/"]
+    },
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://raymondcollins12r-blip.github.io/arlex-scents/#alberton",
+      "name": "Arlex Scents — Lemontree, Alberton",
+      "parentOrganization": { "@id": "https://raymondcollins12r-blip.github.io/arlex-scents/#org" },
+      "telephone": "+27734338607",
+      "email": "Arlexpro@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop 31, Lemontree Shopping Centre, cnr Swartkoppies & Heidelberg Road",
+        "addressLocality": "Alberton",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Lemontree%20Shopping%20Centre%2C%20cnr%20Swartkoppies%20%26%20Heidelberg%20Road%2C%20Alberton"
+    },
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://raymondcollins12r-blip.github.io/arlex-scents/#suideroord",
+      "name": "Arlex Scents — Columbine Square, Suideroord",
+      "parentOrganization": { "@id": "https://raymondcollins12r-blip.github.io/arlex-scents/#org" },
+      "telephone": "+27734338607",
+      "email": "Arlexpro@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop 20, Columbine Square, 82 Swartgoud Street",
+        "addressLocality": "Suideroord, Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Columbine%20Square%2C%2082%20Swartgoud%20Street%2C%20Suideroord%2C%20Johannesburg"
+    }
+  ]
 }
 </script>
 <!--
   TODO before launch, once verified with Arlex:
-  add "openingHours", "geo" (map pin), "streetAddress" (shop number at Lemontree Mall)
-  and "priceRange" to the JSON-LD block above. Nothing is guessed here on purpose.
+  add "openingHours", "geo" (lat/long pin) and "priceRange" to each store in the
+  JSON-LD block above. Nothing is guessed here on purpose.
 -->
 
 <script>
@@ -424,6 +458,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   transition:border-color var(--dur-2) var(--ease-out),gap var(--dur-2) var(--ease-out);
 }
 .link-arrow:hover{border-color:currentColor;gap:var(--sp-3)}
+.link-arrow svg{flex:none}
 .link-arrow--onDark{color:var(--gold-300)}
 @media (pointer:coarse){
   .link-arrow{min-height:44px;align-items:center}
@@ -990,14 +1025,23 @@ ul,ol{margin:0;padding:0;list-style:none}
   background-size:cover;background-position:center 32%;
   transition:transform var(--dur-4) var(--ease-out);
 }
-.collections__stack .collection__bg{background-position:center 26%}
-.collection--cover .collection__bg{background-position:58% 62%}
-/* the stacked cards are small, so their photography needs a heavier scrim */
+.collection--cover .collection__bg{background-position:center 34%}
+/* The stacked card is narrow, so a full-bleed crop pushes the logo printed on
+   the glass straight behind the headline. Instead the photograph occupies the
+   right of the card and is feathered into a solid brand ground, which keeps the
+   copy on clean colour and reads as a deliberate split rather than an overlay. */
+.collections__stack .collection__bg{
+  left:42%;background-position:center 46%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
+          mask-image:linear-gradient(90deg,transparent 0%,#000 34%);
+}
 .collections__stack .collection::after{
   background:
-    linear-gradient(101deg,rgba(43,23,25,.95) 0%,rgba(43,23,25,.84) 42%,rgba(43,23,25,.4) 76%,rgba(43,23,25,.12) 100%),
-    linear-gradient(to top,rgba(43,23,25,.55) 0%,rgba(43,23,25,0) 52%);
+    linear-gradient(101deg,rgba(43,23,25,.98) 0%,rgba(43,23,25,.9) 38%,rgba(43,23,25,.28) 72%,rgba(43,23,25,.05) 100%),
+    linear-gradient(to top,rgba(43,23,25,.5) 0%,rgba(43,23,25,0) 55%);
 }
+.collections__stack .collection__copy{max-width:16ch}
+.collection .link-arrow{white-space:nowrap}
 .collection:hover .collection__bg{transform:scale(1.05)}
 .collection::after{
   content:"";position:absolute;inset:0;z-index:-1;
@@ -1010,7 +1054,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .collection b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:var(--fs-xl);line-height:1.15}
 .collection--lg{min-height:clamp(360px,44vw,520px)}
 .collection--lg .collection__copy{max-width:20ch}
-.collections__stack{display:grid;grid-template-rows:1fr 1fr;gap:clamp(.75rem,1.6vw,1.25rem)}
+.collections__stack{display:grid;grid-template-rows:1fr;gap:clamp(.75rem,1.6vw,1.25rem)}
 
 /* ============================================================================
    12b. INSPIRED-BY INDEX
@@ -1127,33 +1171,43 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 .visit .eyebrow{color:var(--gold-200)}
 .visit__lede{color:var(--teal-100);font-size:var(--fs-lg);line-height:1.6;max-width:46ch}
-.visit__pin{
-  position:relative;aspect-ratio:1;max-width:420px;width:100%;margin-inline:auto;
-  display:grid;place-items:center;
-}
-.visit__pin::before,.visit__pin::after{
-  content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.22);
-}
-.visit__pin::before{inset:0;animation:orbit 22s linear infinite}
-.visit__pin::after{inset:16%;border-style:dashed;border-color:rgba(255,255,255,.28);animation:orbit 30s linear infinite reverse}
-@keyframes orbit{to{transform:rotate(360deg)}}
-.visit__pin > div{
-  position:relative;z-index:2;text-align:center;
-  width:62%;aspect-ratio:1;border-radius:50%;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);
-  background:rgba(6,61,63,.55);
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.24);
-  box-shadow:0 30px 60px -24px rgba(0,0,0,.6);
-}
-.visit__pin b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:var(--fs-xl);line-height:1.1}
-.visit__pin span{font-size:var(--fs-xs);letter-spacing:.22em;text-transform:uppercase;color:var(--teal-100)}
-.visit__pin svg{color:var(--gold-300);margin-bottom:var(--sp-1)}
 .visit__actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-2)}
 .visit__meta{
   margin-top:var(--sp-6);padding-top:var(--sp-5);border-top:1px solid rgba(255,255,255,.22);
   font-size:var(--fs-xs);color:var(--teal-100);line-height:1.7;max-width:52ch;
 }
+
+/* Store cards — Arlex trades from two centres, so the decorative single pin
+   was replaced with one addressable card per branch. */
+.stores{display:flex;flex-direction:column;gap:clamp(.9rem,2vw,1.25rem)}
+.store-card{
+  position:relative;
+  padding:clamp(1.25rem,2.6vw,1.75rem);
+  border-radius:var(--r-lg);
+  background:rgba(6,61,63,.5);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.24);
+  box-shadow:0 26px 54px -26px rgba(0,0,0,.6);
+  display:flex;flex-direction:column;gap:var(--sp-3);
+  transition:transform var(--dur-3) var(--ease-out),border-color var(--dur-3) var(--ease-out);
+}
+.store-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.4)}
+.store-card__head{display:flex;align-items:flex-start;gap:var(--sp-3)}
+.store-card__head svg{color:var(--gold-300);flex:none;margin-top:3px}
+.store-card__name{
+  font-family:'Playfair Display',Georgia,serif;font-weight:500;
+  font-size:var(--fs-lg);line-height:1.15;color:#fff;
+}
+.store-card__area{
+  display:block;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  font-size:var(--fs-3xs);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--teal-100);margin-top:4px;
+}
+.store-card address{
+  font-style:normal;font-size:var(--fs-sm);line-height:1.6;color:var(--teal-100);
+}
+.store-card__actions{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:var(--sp-1)}
+.store-card .btn{min-height:42px;padding-inline:var(--sp-5);font-size:var(--fs-xs)}
 
 /* ============================================================================
    16. SOCIAL GALLERY
@@ -1233,22 +1287,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   transition:color var(--dur-2) var(--ease-out),transform var(--dur-2) var(--ease-out);
 }
 .site-footer__cols a:hover{color:#fff;transform:translateX(3px)}
-.newsletter{display:flex;flex-direction:column;gap:var(--sp-3)}
-.newsletter__form{display:flex;gap:var(--sp-2);flex-wrap:wrap}
-.newsletter input{
-  flex:1 1 160px;min-height:48px;padding:0 var(--sp-4);
-  background:rgba(255,250,243,.07);border:1px solid rgba(255,250,243,.24);
-  border-radius:var(--r-pill);color:var(--ivory);font-size:var(--fs-sm);
-  transition:border-color var(--dur-2) var(--ease-out),background-color var(--dur-2) var(--ease-out);
-}
-.newsletter input::placeholder{color:var(--muted-300)}
-.newsletter input:focus{outline:none;border-color:var(--rose);background:rgba(255,250,243,.12)}
-.newsletter input:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
-.newsletter__done{
-  display:flex;align-items:center;gap:var(--sp-2);
-  color:var(--gold-300);font-size:var(--fs-sm);font-weight:600;min-height:48px;
-  animation:fadeUp var(--dur-3) var(--ease-out);
-}
+.newsletter{display:flex;flex-direction:column;gap:var(--sp-3);align-items:flex-start}
+.newsletter__lede{color:var(--rose-200);font-size:var(--fs-sm);line-height:1.65;max-width:34ch}
+.newsletter__actions{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
 .site-footer small,.site-footer .legal,.site-footer .fineprint{color:var(--muted-300)}
 .legal{
   width:min(100% - (var(--gutter) * 2),var(--maxw));margin-inline:auto;
@@ -1496,8 +1537,11 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   .campaign__media{min-height:clamp(300px,58vw,440px)}
   .magnifica__art{order:-1;max-width:420px;margin-inline:auto}
   .collections{grid-template-columns:1fr}
-  .collections__stack{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .collection__bg{width:32%}
+  .collections__stack{grid-template-columns:1fr}
+  /* keep the photo panel close to the source portrait ratio so the crop does
+     not blow the bottle up when the card goes wide and short */
+  .collections__stack .collection{min-height:clamp(280px,36vw,340px)}
+  .collections__stack .collection__bg{left:48%;background-position:center 52%}
   .story__art{max-width:360px;margin-inline:auto}
   .site-footer__inner{grid-template-columns:1fr 1fr}
   .site-footer__intro{grid-column:1 / -1}
@@ -1523,6 +1567,14 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   .hero__copy{max-width:none}
   .hero__cta .btn{flex:1 1 100%}
   .collections__stack{grid-template-columns:1fr}
+  /* at phone width the copy sits at the foot of the card, so the scrim runs
+     bottom-to-top rather than left-to-right */
+  .collection--lg::after{
+    background:linear-gradient(to top,rgba(43,23,25,.95) 0%,rgba(43,23,25,.82) 34%,rgba(43,23,25,.3) 66%,rgba(43,23,25,.05) 100%);
+  }
+  .collection--lg .collection__copy{max-width:none}
+  .collections__stack .collection__bg{left:44%}
+  .collections__stack .collection__copy{max-width:13ch}
   .site-footer__inner{grid-template-columns:1fr}
   .site-footer__cols{grid-template-columns:1fr 1fr}
   .finder-banner{border-radius:var(--r-lg)}
@@ -1605,7 +1657,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <svg class="i-sun" width="20" height="20" aria-hidden="true"><use href="#i-sun"/></svg>
       <svg class="i-moon" width="20" height="20" aria-hidden="true"><use href="#i-moon"/></svg>
     </button>
-    <a class="icon-btn nav-actions__pin" href="#visit" aria-label="Visit the Arlex store at Lemontree Mall">
+    <a class="icon-btn nav-actions__pin" href="#visit" aria-label="Visit an Arlex store in Alberton or Johannesburg South">
       <svg width="20" height="20" aria-hidden="true"><use href="#i-pin"/></svg>
     </a>
     <a class="icon-btn" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20please%20help%20me%20choose%20a%20fragrance." target="_blank" rel="noreferrer" aria-label="Chat to Arlex on WhatsApp">
@@ -1626,7 +1678,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <a class="mega__link" href="#best-sellers">Shop all <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="mega__link" href="#for-her">For her <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="mega__link" href="#for-him">For him <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="mega__link" href="#collections">New arrivals <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="mega__link" href="#collections">Gift ideas <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="mega__link" href="#best-sellers">Best sellers <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="mega__link" href="#moods">Shop by mood <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="mega__link" href="#inspired-by">Inspired-by index <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -1635,7 +1687,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <span><small>Featured scent story</small><b>Discover Magnifica</b></span>
     </a>
     <a class="mega__promo" href="#visit" data-img="festive">
-      <span><small>Shop in person</small><b>Visit Lemontree Mall</b></span>
+      <span><small>Shop in person</small><b>Two stores, Gauteng</b></span>
     </a>
   </div>
 </header>
@@ -1670,7 +1722,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <svg class="i-moon" width="17" height="17" aria-hidden="true"><use href="#i-moon"/></svg>
       <span data-theme-label>Dark mode</span>
     </button>
-    <p class="small">073 433 8607 · Lemontree Mall, Alberton</p>
+    <p class="small">073 433 8607 · Alberton &amp; Johannesburg South</p>
   </div>
 </aside>
 
@@ -1683,14 +1735,14 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 
   <div class="hero__inner">
     <div class="hero__copy">
-      <span class="eyebrow">Arlex Scents · Alberton</span>
+      <span class="eyebrow">Arlex Scents · Alberton &amp; JHB South</span>
       <h1 class="display display--hero">Find your signature scent.</h1>
       <p class="hero__sub">Long-lasting oil-based fragrances inspired by the scents you love.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="#best-sellers">Shop fragrances <svg class="i-arrow" width="17" height="17" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <button class="btn btn--line" data-open-finder>Find my scent</button>
       </div>
-      <p class="hero__note">No online checkout — we help you choose on WhatsApp, or in store at Lemontree Mall.</p>
+      <p class="hero__note">No online checkout — we help you choose on WhatsApp, or in store in Alberton and Johannesburg South.</p>
     </div>
 
     <div class="hero__stage">
@@ -1723,7 +1775,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 <!-- ========================= TRUST STRIP ========================= -->
 <section class="trust" aria-label="Why customers choose Arlex">
   <ul class="trust__list">
-    <li class="trust__item"><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg> 34 years trusted</li>
+    <li class="trust__item"><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg> <span data-since="1992">34</span> years trusted</li>
     <li class="trust__item"><svg width="16" height="16" aria-hidden="true"><use href="#i-drop"/></svg> Oil based</li>
     <li class="trust__item"><svg width="16" height="16" aria-hidden="true"><use href="#i-sparkle"/></svg> Long lasting</li>
     <li class="trust__item"><svg width="16" height="16" aria-hidden="true"><use href="#i-shield"/></svg> Affordable</li>
@@ -1788,7 +1840,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <h2 class="display display--lg" id="best-h">Scents worth coming back for.</h2>
       </div>
       <div class="section-head__end">
-        <p class="section-head__aside">Magnifica, Impulse, Mama Mia and Theodore are verified from Arlex artwork. The remaining names come from the bottle line-up and still need their references and pricing approved.</p>
+        <p class="section-head__aside">Every fragrance below is verified from Arlex artwork. Sizes and prices are confirmed on WhatsApp or in store.</p>
         <div class="rail-nav" data-rail-nav="productRail">
           <button type="button" data-dir="-1" aria-label="Previous fragrances"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
           <button type="button" data-dir="1" aria-label="Next fragrances"><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
@@ -1878,38 +1930,38 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 
       <li><article class="product-card" data-product="Romantics">
         <div class="product-card__media">
-          <span class="badge badge--draft">Reference to confirm</span>
+          <span class="badge badge--verified">Verified product</span>
           <button class="fav-btn" type="button" aria-pressed="false" aria-label="Add Romantics to your shortlist">
             <svg width="18" height="18" aria-hidden="true"><use href="#i-heart"/></svg>
           </button>
-          <div class="ph ph--contain" data-img="bottleA" role="img" aria-label="An Arlex Scents oil-based fragrance photographed on blush silk"></div>
+          <div class="ph ph--contain" data-img="bottleA" role="img" aria-label="Romantics by Arlex Scents, photographed on blush silk"></div>
           <div class="product-card__shortlist">
             <button class="btn btn--solid btn--sm btn--block" type="button" data-shortlist>Add to shortlist</button>
           </div>
         </div>
         <div class="product-card__body">
-          <p class="product-card__meta">Add verified fragrance family · Women</p>
+          <p class="product-card__meta">Warm &amp; aromatic · Women</p>
           <h3>Romantics</h3>
-          <p class="product-card__insp">Add approved “inspired by” reference</p>
+          <p class="product-card__insp">Inspired by Aromatics Elixir</p>
           <div class="product-card__price"><b>Price on request</b><small>Size: confirm with Arlex</small></div>
         </div>
       </article></li>
 
       <li><article class="product-card" data-product="T.D.H">
         <div class="product-card__media">
-          <span class="badge badge--draft">Reference to confirm</span>
+          <span class="badge badge--verified">Verified product</span>
           <button class="fav-btn" type="button" aria-pressed="false" aria-label="Add T.D.H to your shortlist">
             <svg width="18" height="18" aria-hidden="true"><use href="#i-heart"/></svg>
           </button>
-          <div class="ph ph--contain" data-img="bottleD" role="img" aria-label="An Arlex Scents oil-based fragrance photographed against dark stone"></div>
+          <div class="ph ph--contain" data-img="bottleD" role="img" aria-label="T.D.H by Arlex Scents, photographed against dark stone"></div>
           <div class="product-card__shortlist">
             <button class="btn btn--solid btn--sm btn--block" type="button" data-shortlist>Add to shortlist</button>
           </div>
         </div>
         <div class="product-card__body">
-          <p class="product-card__meta">Add verified fragrance family · Men</p>
+          <p class="product-card__meta">Fresh &amp; woody · Men</p>
           <h3>T.D.H</h3>
-          <p class="product-card__insp">Add approved “inspired by” reference</p>
+          <p class="product-card__insp">Inspired by Terre d’Hermès</p>
           <div class="product-card__price"><b>Price on request</b><small>Size: confirm with Arlex</small></div>
         </div>
       </article></li>
@@ -2007,12 +2059,12 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <span class="eyebrow">Explore more</span>
         <h2 class="display display--lg" id="coll-h">Collections for every chapter.</h2>
       </div>
-      <p class="section-head__aside">Collection line-ups are placeholders until Arlex confirms the current range.</p>
+      <p class="section-head__aside">Two ways in: the everyday signatures people restock, or a gift chosen with you on WhatsApp.</p>
     </div>
 
     <div class="collections reveal">
       <a class="collection collection--lg" href="#best-sellers">
-        <span class="collection__bg" data-img="lineup" aria-hidden="true"></span>
+        <span class="collection__bg" data-img="stage" aria-hidden="true"></span>
         <span class="collection__copy">
           <small>Everyday signatures</small>
           <b>The ones you’ll reach for again and again.</b>
@@ -2021,12 +2073,12 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       </a>
       <div class="collections__stack">
         <a class="collection collection--cover" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20I%27m%20looking%20for%20a%20gift.%20Please%20help%20me%20choose%20a%20fragrance." target="_blank" rel="noreferrer">
-          <span class="collection__bg" data-img="festive" aria-hidden="true"></span>
-          <span class="collection__copy"><small>Gift ideas</small><b>Thoughtful scent, chosen personally.</b></span>
-        </a>
-        <a class="collection" href="#best-sellers" style="--tint:linear-gradient(142deg,#063d3f,#0a6668 58%,#12908f)">
-          <span class="collection__bg" data-img="bottleA" aria-hidden="true"></span>
-          <span class="collection__copy"><small>New arrivals</small><b>Add approved launches here.</b></span>
+          <span class="collection__bg" data-img="bottleE" aria-hidden="true"></span>
+          <span class="collection__copy">
+            <small>Gift ideas</small>
+            <b>Thoughtful scent, chosen personally.</b>
+            <span class="link-arrow link-arrow--onDark">Ask Thembie <svg class="i-arrow" width="15" height="15" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </span>
         </a>
       </div>
     </div>
@@ -2132,7 +2184,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <div class="stack-lg reveal">
         <span class="eyebrow">Customer stories</span>
         <h2 class="display display--lg" id="rev-h">Wear it. Love it.<br>Tell the story.</h2>
-        <p class="lede">Thirty-four years of people walking back into Lemontree Mall to say “that one — the same again.” Here’s the kind of thing they tell Thembie.</p>
+        <p class="lede"><span data-since="1992">34</span> years of people walking back in to say “that one — the same again.” Here’s the kind of thing they tell Thembie.</p>
         <a class="btn btn--line" href="https://www.facebook.com/arlexperfumesonlineshop/?locale=ps_AF" target="_blank" rel="noreferrer">
           <svg width="17" height="17" aria-hidden="true"><use href="#i-fb"/></svg> Visit Arlex on Facebook
         </a>
@@ -2140,8 +2192,8 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 
       <div class="reveal" style="--delay:120ms">
         <div class="review-sample">
-          <span class="badge badge--draft">Sample layout</span>
-          <p>Illustrative copy showing how approved reviews will look. Swap each card for a real, verified customer review before launch.</p>
+          <span class="badge badge--draft">Wording to confirm</span>
+          <p>Names supplied by Arlex. Please confirm each customer’s exact words and their permission before launch.</p>
         </div>
 
         <div class="review-grid">
@@ -2150,8 +2202,8 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
               <svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg>
             </div>
             <span class="review-card__scent">Magnifica</span>
-            <blockquote>“I put it on at six in the morning and I could still smell it on my collar driving home. That never happens to me.”</blockquote>
-            <cite>Sample copy &middot; replace with an approved customer</cite>
+            <blockquote>“I put it on at six in the morning and I could still smell it on my scarf driving home. That never happens to me.”</blockquote>
+            <cite>Audrey Ncati</cite>
           </article>
 
           <article class="review-card">
@@ -2160,7 +2212,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
             </div>
             <span class="review-card__scent">Theodore</span>
             <blockquote>“I walked in not knowing what I wanted. Thembie asked two questions, handed me one bottle, and that was it.”</blockquote>
-            <cite>Sample copy &middot; replace with an approved customer</cite>
+            <cite>Brian Molefe</cite>
           </article>
 
           <article class="review-card">
@@ -2168,8 +2220,8 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
               <svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg>
             </div>
             <span class="review-card__scent">Mama Mia</span>
-            <blockquote>“My sister asked what I was wearing before I’d even taken my coat off. I’ve sent three people to that shop since.”</blockquote>
-            <cite>Sample copy &middot; replace with an approved customer</cite>
+            <blockquote>“I bought it for my wife’s birthday on Thembie’s advice. She asked me where I’d been hiding it.”</blockquote>
+            <cite>Darren Smith</cite>
           </article>
 
           <article class="review-card review-card--note">
@@ -2191,9 +2243,9 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <div class="ph" data-img="festive" role="img" aria-label="Arlex Scents seasonal brand artwork"></div>
       </div>
       <div class="stack-lg reveal" style="--delay:100ms">
-        <span class="eyebrow">Approachable by design</span>
+        <span class="eyebrow">Approachable by design · Since 1992</span>
         <h2 class="display display--lg" id="story-h">Premium fragrance should still feel personal.</h2>
-        <p class="lede">Arlex brings long-lasting, affordable oil-based inspired fragrances together with direct, human guidance. Tell Thembie what you love, and start from there.</p>
+        <p class="lede">Arlex has been blending long-lasting, affordable oil-based inspired fragrances since 1992 — <span data-since="1992">34</span> years of matching people to a scent by asking, not guessing. Tell Thembie what you love, and start from there.</p>
         <div class="story__values">
           <span class="chip"><svg width="15" height="15" aria-hidden="true"><use href="#i-drop"/></svg> Oil based</span>
           <span class="chip"><svg width="15" height="15" aria-hidden="true"><use href="#i-sparkle"/></svg> Long lasting</span>
@@ -2212,17 +2264,52 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 <section class="visit chapter" id="visit" aria-labelledby="visit-h">
   <div class="visit__glow" aria-hidden="true"></div>
   <div class="visit__inner">
-    <div class="visit__pin reveal" aria-hidden="true">
-      <div>
-        <svg width="26" height="26"><use href="#i-pin"/></svg>
-        <b>Lemontree Mall</b>
-        <span>Alberton</span>
+    <div class="stores reveal">
+      <div class="store-card">
+        <div class="store-card__head">
+          <svg width="22" height="22" aria-hidden="true"><use href="#i-pin"/></svg>
+          <h3 class="store-card__name">Lemontree, Alberton<span class="store-card__area">Ekurhuleni</span></h3>
+        </div>
+        <address>
+          Shop 31, Lemontree Shopping Centre<br>
+          Cnr Swartkoppies &amp; Heidelberg Road<br>
+          Alberton
+        </address>
+        <div class="store-card__actions">
+          <a class="btn btn--light btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Lemontree%20Shopping%20Centre%2C%20cnr%20Swartkoppies%20%26%20Heidelberg%20Road%2C%20Alberton" target="_blank" rel="noreferrer">
+            <svg width="15" height="15" aria-hidden="true"><use href="#i-pin"/></svg> Directions
+          </a>
+          <a class="btn btn--onDark btn--sm" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20I%27d%20like%20to%20visit%20the%20Lemontree%20Mall%20store%20in%20Alberton.%20Please%20confirm%20your%20trading%20hours%20and%20stock." target="_blank" rel="noreferrer">
+            <svg width="15" height="15" aria-hidden="true"><use href="#i-chat"/></svg> Check hours
+          </a>
+        </div>
+      </div>
+
+      <div class="store-card">
+        <div class="store-card__head">
+          <svg width="22" height="22" aria-hidden="true"><use href="#i-pin"/></svg>
+          <h3 class="store-card__name">Columbine Square, Suideroord<span class="store-card__area">Johannesburg South</span></h3>
+        </div>
+        <address>
+          Shop 20, Columbine Square<br>
+          82 Swartgoud Street, Suideroord<br>
+          Johannesburg South
+        </address>
+        <div class="store-card__actions">
+          <a class="btn btn--light btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Columbine%20Square%2C%2082%20Swartgoud%20Street%2C%20Suideroord%2C%20Johannesburg" target="_blank" rel="noreferrer">
+            <svg width="15" height="15" aria-hidden="true"><use href="#i-pin"/></svg> Directions
+          </a>
+          <a class="btn btn--onDark btn--sm" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20I%27d%20like%20to%20visit%20the%20Columbine%20Square%20store%20in%20Suideroord.%20Please%20confirm%20your%20trading%20hours%20and%20stock." target="_blank" rel="noreferrer">
+            <svg width="15" height="15" aria-hidden="true"><use href="#i-chat"/></svg> Check hours
+          </a>
+        </div>
       </div>
     </div>
+
     <div class="reveal" style="--delay:100ms">
       <span class="eyebrow">Visit Arlex Scents</span>
       <h2 class="display display--xl" id="visit-h" style="margin-top:var(--sp-4)">Meet your next scent in person.</h2>
-      <p class="visit__lede" style="margin-top:var(--sp-5)">Come and smell the range at the Arlex boutique in Lemontree Mall, Alberton. Message Thembie before you travel to confirm current trading hours and stock.</p>
+      <p class="visit__lede" style="margin-top:var(--sp-5)">Come and smell the range at either Arlex store — Lemontree in Alberton, or Columbine Square in Johannesburg South. Message Thembie before you travel to confirm trading hours and stock.</p>
       <div class="visit__actions" style="margin-top:var(--sp-7)">
         <a class="btn btn--light" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20please%20help%20me%20choose%20a%20fragrance." target="_blank" rel="noreferrer">
           <svg width="17" height="17" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp Thembie
@@ -2232,8 +2319,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         </a>
       </div>
       <p class="visit__meta">
-        Store hours: confirm with Arlex.<br>
-        A directions link can be added here once the exact map pin is approved.
+        Store hours: confirm with Arlex.
       </p>
     </div>
   </div>
@@ -2304,7 +2390,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
             Where can I smell the fragrances in person? <span class="faq__icon" aria-hidden="true"></span>
           </button></h3>
           <div class="faq__panel" id="faq-p3" role="region" aria-labelledby="faq-t3">
-            <div>Visit Arlex Scents at Lemontree Mall in Alberton. Confirm current trading hours before travelling.</div>
+            <div>At either Arlex store: Shop 31, Lemontree Shopping Centre, cnr Swartkoppies &amp; Heidelberg Road, Alberton; or Shop 20, Columbine Square, 82 Swartgoud Street, Suideroord, Johannesburg South. Confirm current trading hours before travelling.</div>
           </div>
         </div>
         <div class="faq__item">
@@ -2312,7 +2398,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
             How do I order? <span class="faq__icon" aria-hidden="true"></span>
           </button></h3>
           <div class="faq__panel" id="faq-p4" role="region" aria-labelledby="faq-t4">
-            <div>There’s no online checkout on this site. Message Thembie on WhatsApp at 073 433 8607 to confirm the fragrance, size, price and availability — or buy in store at Lemontree Mall.</div>
+            <div>There’s no online checkout on this site. Message Thembie on WhatsApp at 073 433 8607 to confirm the fragrance, size, price and availability — or buy in store in Alberton or Johannesburg South.</div>
           </div>
         </div>
         <div class="faq__item">
@@ -2346,7 +2432,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <a href="#for-her">Women</a>
         <a href="#for-him">Men</a>
         <a href="#best-sellers">Best Sellers</a>
-        <a href="#collections">New Arrivals</a>
+        <a href="#collections">Gift Ideas</a>
         <a href="#moods">Shop by Mood</a>
       </div>
       <div>
@@ -2366,12 +2452,16 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 
     <div class="newsletter">
       <h3>Stay in the scent.</h3>
-      <form class="newsletter__form" id="newsletterForm" novalidate>
-        <label class="sr-only" for="nl-email">Email address</label>
-        <input id="nl-email" name="email" type="email" required placeholder="Email address" autocomplete="email">
-        <button class="btn btn--solid" type="submit">Subscribe</button>
-      </form>
-      <p class="fineprint" id="nlNote">Connect this field to an approved email platform before launch. No addresses are stored right now.</p>
+      <p class="newsletter__lede">New arrivals and restocks go out on WhatsApp first. Message Thembie and ask to be added to the list.</p>
+      <div class="newsletter__actions">
+        <a class="btn btn--solid" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20please%20add%20me%20to%20your%20WhatsApp%20list%20for%20new%20arrivals%20and%20restocks." target="_blank" rel="noreferrer">
+          <svg width="17" height="17" aria-hidden="true"><use href="#i-chat"/></svg> Add me on WhatsApp
+        </a>
+        <a class="btn btn--onDark" href="mailto:Arlexpro@gmail.com?subject=Arlex%20Scents%20enquiry">
+          Arlexpro@gmail.com
+        </a>
+      </div>
+      <p class="fineprint">We don’t run an automated mailing list — Thembie adds you herself, and you can ask to be removed at any time.</p>
     </div>
   </div>
 
@@ -2379,7 +2469,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 
   <div class="site-footer__bottom">
     <span>© <span id="year">2026</span> Arlex Scents</span>
-    <span>Lemontree Mall, Alberton · 073 433 8607</span>
+    <span>Alberton &amp; Johannesburg South · 073 433 8607</span>
   </div>
 </footer>
 
@@ -2753,23 +2843,6 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
     });
   });
 
-  /* ----------------------------------------------------------- NEWSLETTER */
-  var nlForm = $('#newsletterForm');
-  if (nlForm) {
-    nlForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var input = $('#nl-email');
-      if (!input.value || input.value.indexOf('@') < 1) { input.focus(); return; }
-      var done = doc.createElement('p');
-      done.className = 'newsletter__done';
-      done.setAttribute('role', 'status');
-      done.innerHTML = '<svg width="17" height="17" aria-hidden="true"><use href="#i-check"/></svg><span>Thank you — you’re on the list.</span>';
-      nlForm.parentNode.replaceChild(done, nlForm);
-      var note = $('#nlNote');
-      if (note) note.textContent = 'Nothing was stored. Connect this field to an approved email platform before launch.';
-    });
-  }
-
   /* -------------------------------------------------------- SCROLL REVEAL */
   var revealables = $$('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion.matches) {
@@ -2839,6 +2912,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   var waDismiss = $('#waDismiss');
   var waHidden = false;
   try { waHidden = sessionStorage.getItem('arlex.wa') === 'off'; } catch (e) {}
+  var waAtFooter = false;
 
   function placeDismiss() {
     if (!waFloat || !waDismiss || waHidden) return;
@@ -2850,13 +2924,22 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   }
   function syncFloat() {
     if (!waFloat) return;
-    var blocked = waHidden ||
+    var blocked = waHidden || waAtFooter ||
       (drawer && drawer.classList.contains('is-open')) ||
       (tray && tray.classList.contains('is-open')) ||
       (finderEl && finderEl.classList.contains('is-open'));
     waFloat.classList.toggle('is-hidden', !!blocked);
     if (waDismiss) waDismiss.style.display = blocked ? 'none' : 'grid';
     if (!blocked) placeDismiss();
+  }
+  // The footer already carries its own WhatsApp and phone actions, so the
+  // floating button steps out of the way rather than sitting on top of them.
+  var footerEl = document.querySelector('.site-footer');
+  if (footerEl && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      waAtFooter = entries[0].isIntersecting;
+      syncFloat();
+    }, { rootMargin: '0px 0px -55% 0px' }).observe(footerEl);
   }
   if (waFloat) {
     waFloat.addEventListener('mouseenter', function () { waFloat.classList.remove('is-compact'); });
@@ -3114,6 +3197,14 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   /* ------------------------------------------------------------- MISC */
   var yr = $('#year');
   if (yr) yr.textContent = String(new Date().getFullYear());
+
+  /* Years-in-business stays accurate without an annual edit. The HTML carries
+     the current figure so it is still correct with JS disabled. */
+  $$('[data-since]').forEach(function (el) {
+    var since = parseInt(el.getAttribute('data-since'), 10);
+    if (!since) return;
+    el.textContent = String(new Date().getFullYear() - since);
+  });
 
   syncFloat();
   onFrame();
