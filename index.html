@@ -1025,6 +1025,15 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 .index-chip:hover i,.index-chip:focus-visible i{color:var(--accent-ink)}
 .index-chip:active{transform:translateY(0)}
+/* Trade-mark / passing-off notice: prominent by design, not buried fineprint */
+.index-notice{
+  margin:var(--sp-6) 0 var(--sp-9);
+  padding:clamp(1.1rem,2.4vw,1.5rem) clamp(1.2rem,2.8vw,1.75rem);
+  border:1px solid var(--accent-quiet);border-left:3px solid var(--accent);
+  border-radius:var(--r-md);background:var(--accent-soft);
+  color:var(--ink-2);font-size:var(--fs-sm);line-height:1.65;max-width:92ch;
+}
+.index-notice strong{color:var(--ink);font-weight:600}
 @media (max-width:720px){
   .index-grid{grid-template-columns:1fr;gap:var(--sp-8)}
   .index-chip{min-height:44px;padding:.6em 1em}
@@ -1033,18 +1042,38 @@ ul,ol{margin:0;padding:0;list-style:none}
 /* ============================================================================
    13. REVIEWS / COMMUNITY
    ========================================================================= */
-.community{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.community{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
 .review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.9rem,2vw,1.4rem)}
 .review-card{
-  background:var(--surface);border:1px dashed var(--border-strong);border-radius:var(--r-lg);
-  padding:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;gap:var(--sp-4);
-  min-height:230px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:clamp(1.35rem,2.8vw,1.85rem);display:flex;flex-direction:column;gap:var(--sp-3);
+  min-height:230px;box-shadow:var(--e-1);
+  transition:transform var(--dur-3) var(--ease-out),box-shadow var(--dur-3) var(--ease-out);
 }
-.review-card__stars{display:flex;gap:4px;color:var(--border-strong)}
-.review-card blockquote{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:var(--fs-lg);line-height:1.4;color:var(--ink-2)}
-.review-card cite{font-style:normal;font-size:var(--fs-xs);color:var(--ink-3);letter-spacing:.1em;text-transform:uppercase;margin-top:auto}
-.review-card--note{background:var(--accent-soft);border-style:solid;border-color:var(--accent-quiet)}
+.review-card:hover{transform:translateY(-3px);box-shadow:var(--e-2)}
+.review-card__stars{display:flex;gap:3px;color:var(--gold)}
+.review-card__stars svg{fill:currentColor}
+.review-card blockquote{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:var(--fs-md);line-height:1.45;color:var(--ink)}
+.review-card cite{
+  font-style:normal;font-size:var(--fs-3xs);color:var(--ink-3);
+  letter-spacing:.13em;text-transform:uppercase;margin-top:auto;line-height:1.6;
+}
+.review-card cite b{display:block;color:var(--ink-2);font-weight:600;letter-spacing:.1em}
+.review-card__scent{
+  align-self:flex-start;font-size:var(--fs-3xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-quiet);
+  border-radius:var(--r-pill);padding:.32em .7em;
+}
+.review-card--note{background:var(--accent-soft);border-style:dashed;border-color:var(--accent-quiet)}
 .review-card--note h3{font-size:var(--fs-md);font-weight:600;line-height:1.5}
+.review-sample{
+  display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap;
+  margin-bottom:var(--sp-5);
+}
+.review-sample p{font-size:var(--fs-xs);color:var(--ink-3);margin:0;max-width:62ch;line-height:1.6}
+@media (max-width:900px){
+  .review-grid{grid-template-columns:1fr}
+}
 
 /* ============================================================================
    14. STORY
@@ -1528,6 +1557,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/></symbol>
 <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
 <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 2.9a.6.6 0 0 1 1 0l2.4 4.9 5.4.8a.6.6 0 0 1 .3 1l-3.9 3.8.9 5.4a.6.6 0 0 1-.86.63L12 16.9l-4.8 2.5a.6.6 0 0 1-.87-.63l.92-5.4-3.9-3.8a.6.6 0 0 1 .33-1l5.4-.8Z"/></symbol>
+<symbol id="i-star-f" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M11.5 2.9a.6.6 0 0 1 1 0l2.4 4.9 5.4.8a.6.6 0 0 1 .3 1l-3.9 3.8.9 5.4a.6.6 0 0 1-.86.63L12 16.9l-4.8 2.5a.6.6 0 0 1-.87-.63l.92-5.4-3.9-3.8a.6.6 0 0 1 .33-1l5.4-.8Z"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
 <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></symbol>
 <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13.83 19a15.05 15.05 0 0 1-8.83-8.83l2.14-1.6a1.5 1.5 0 0 0 .5-1.7L6.7 4.3A1.5 1.5 0 0 0 5.3 3.3H3.5A1.5 1.5 0 0 0 2 4.9 17.1 17.1 0 0 0 19.1 22a1.5 1.5 0 0 0 1.6-1.5v-1.8a1.5 1.5 0 0 0-1-1.4l-2.57-.94a1.5 1.5 0 0 0-1.7.5Z"/></symbol>
@@ -1861,7 +1891,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
   </div>
 
   <div class="shell" style="margin-top:var(--sp-6)">
-    <p class="fineprint reveal">“Inspired by” describes the scent profile only. Arlex Scents is not affiliated with, endorsed by, or connected to any designer brand named on this site.</p>
+    <p class="fineprint reveal">“Inspired by” names the original fragrance whose scent profile an Arlex generic interprets — it is not that fragrance. All such names and marks belong to their respective owners. Arlex Scents is independent and is not affiliated with, licensed by or endorsed by any designer brand named on this site.</p>
   </div>
 </section>
 <!-- ========================= FOR HER ========================= -->
@@ -1899,7 +1929,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <button class="btn btn--onDark" data-open-finder>Find my scent</button>
       </div>
 
-      <p class="magnifica__disclaimer">“Inspired by” describes the scent profile only — no affiliation with Paco Rabanne. Size, price and availability on request.</p>
+      <p class="magnifica__disclaimer">Magnifica is an Arlex generic, inspired by the scent profile of Paco Rabanne Olympéa — it is not Olympéa, and that name and mark belong to Paco Rabanne. No affiliation or endorsement. Size, price and availability on request.</p>
     </div>
 
     <div class="magnifica__art reveal" style="--delay:120ms">
@@ -1976,6 +2006,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
 </section>
 
 
+
 <!-- ========================= INSPIRED-BY INDEX ========================= -->
 <section class="section section--sunk" id="inspired-by" aria-labelledby="idx-h">
   <div class="shell">
@@ -1984,81 +2015,85 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
         <span class="eyebrow">The inspired-by index</span>
         <h2 class="display display--lg" id="idx-h">Scents people ask for by name.</h2>
       </div>
-      <p class="section-head__aside">Arlex&rsquo;s most requested profiles for 2026, transcribed from the in-store list. Tap any name to ask Thembie on WhatsApp what&rsquo;s in stock &mdash; there&rsquo;s no checkout here, just a real answer.</p>
+      <p class="section-head__aside">The names below are some of the world&rsquo;s great original fragrances, owned by the houses that created them. Arlex doesn&rsquo;t sell those perfumes &mdash; we make our <em>own</em> generic version inspired by each scent profile, under our own Arlex name. Tap any profile to ask Thembie what&rsquo;s in stock.</p>
     </div>
+
+    <p class="index-notice reveal">
+      <strong>How to read this list.</strong> Every name here is a registered trade mark of its owner and identifies <em>their</em> original fragrance &mdash; not ours. Arlex Scents is an independent manufacturer of upmarket generics: our own oil-based interpretation of a scent profile, bottled and sold under an Arlex name such as Magnifica, Impulse, Mama Mia or Theodore. We are not affiliated with, licensed by, endorsed by or connected to any of these houses, we don&rsquo;t copy their packaging or presentation, and we never sell an Arlex bottle as if it were theirs.
+    </p>
 
     <div class="index-grid reveal">
       <div class="index-col">
-        <h3>For her <span>33 profiles</span></h3>
+        <h3>Inspired by, for her <span>33 profiles</span></h3>
         <ul class="index-list">
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Alien%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Alien">Alien</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Alien%20Goddess%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Alien Goddess">Alien Goddess</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Angel%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Angel">Angel</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Aromatics%20Elexir%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Aromatics Elexir">Aromatics Elexir</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Be%20Delicious%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Be Delicious">Be Delicious</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Black%20Opium%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Black Opium">Black Opium</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Coach%20by%20Coach%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Coach by Coach">Coach by Coach</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Coco%20Madamoiselle%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Coco Madamoiselle">Coco Madamoiselle</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20D%26G%20Light%20Blue%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by D&amp;G Light Blue"><i>D&amp;G</i> Light Blue</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Dylan%20Purple%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Dylan Purple">Dylan Purple</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Elie%20Saab%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Elie Saab">Elie Saab</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Fantasy%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Fantasy">Fantasy</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Fame%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Fame">Fame</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Femme%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Femme">Femme</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Good%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Good Girl">Good Girl</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Gucci%20Rush%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Gucci Rush"><i>Gucci</i> Rush</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Hypnotic%20Poison%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Hypnotic Poison">Hypnotic Poison</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20J%E2%80%99Adore%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by J’Adore">J’Adore</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Kors%20Pure%20White%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Kors Pure White"><i>Kors</i> Pure White</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Lady%20Emblem%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Lady Emblem">Lady Emblem</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20La%20Vie%20Belle%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by La Vie Belle">La Vie Belle</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Mercedes%20Woman%20in%20Red%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Mercedes Woman in Red"><i>Mercedes</i> Woman in Red</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20My%20Way%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by My Way">My Way</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Narcisse%20Rodriques%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Narcisse Rodriques">Narcisse Rodriques</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Olympia%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Olympia">Olympia</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20One%20Million%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by One Million">One Million</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Opium%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Opium">Opium</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Pleasures%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Pleasures">Pleasures</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Roberto%20Cavalli%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Roberto Cavalli">Roberto Cavalli</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Scandal%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Scandal">Scandal</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Armani%20Si%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Armani Si"><i>Armani</i> Si</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Very%20Good%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Very Good Girl">Very Good Girl</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Wanted%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Wanted Girl">Wanted Girl</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Alien%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Alien">Alien</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Alien%20Goddess%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Alien Goddess">Alien Goddess</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Angel%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Angel">Angel</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Aromatics%20Elexir%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Aromatics Elexir">Aromatics Elexir</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Be%20Delicious%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Be Delicious">Be Delicious</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Black%20Opium%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Black Opium">Black Opium</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Coach%20by%20Coach%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Coach by Coach">Coach by Coach</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Coco%20Madamoiselle%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Coco Madamoiselle">Coco Madamoiselle</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20D%26G%20Light%20Blue%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by D&amp;G Light Blue"><i>D&amp;G</i> Light Blue</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Dylan%20Purple%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Dylan Purple">Dylan Purple</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Elie%20Saab%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Elie Saab">Elie Saab</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Fantasy%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Fantasy">Fantasy</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Fame%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Fame">Fame</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Femme%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Femme">Femme</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Good%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Good Girl">Good Girl</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Gucci%20Rush%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Gucci Rush"><i>Gucci</i> Rush</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Hypnotic%20Poison%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Hypnotic Poison">Hypnotic Poison</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20J%E2%80%99Adore%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by J’Adore">J’Adore</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Kors%20Pure%20White%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Kors Pure White"><i>Kors</i> Pure White</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Lady%20Emblem%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Lady Emblem">Lady Emblem</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20La%20Vie%20Belle%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by La Vie Belle">La Vie Belle</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Mercedes%20Woman%20in%20Red%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Mercedes Woman in Red"><i>Mercedes</i> Woman in Red</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20My%20Way%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by My Way">My Way</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Narcisse%20Rodriques%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Narcisse Rodriques">Narcisse Rodriques</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Olympia%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Olympia">Olympia</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20One%20Million%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by One Million">One Million</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Opium%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Opium">Opium</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Pleasures%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Pleasures">Pleasures</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Roberto%20Cavalli%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Roberto Cavalli">Roberto Cavalli</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Scandal%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Scandal">Scandal</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Armani%20Si%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Armani Si"><i>Armani</i> Si</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Very%20Good%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Very Good Girl">Very Good Girl</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Wanted%20Girl%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Wanted Girl">Wanted Girl</a></li>
         </ul>
       </div>
       <div class="index-col">
-        <h3>For him <span>25 profiles</span></h3>
+        <h3>Inspired by, for him <span>25 profiles</span></h3>
         <ul class="index-list">
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Aramis%20900%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Aramis 900"><i>Aramis</i> 900</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Aramis%20New%20West%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Aramis New West"><i>Aramis</i> New West</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Azzaro%20Most%20Wanted%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Azzaro Most Wanted"><i>Azzaro</i> Most Wanted</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Azzaro%20Wanted%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Azzaro Wanted"><i>Azzaro</i> Wanted</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Armani%20Profundo%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Armani Profundo"><i>Armani</i> Profundo</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Baccarat%20Rouge%20540%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Baccarat Rouge 540"><i>Baccarat</i> Rouge 540</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Oud%20Satin%20Mood%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Oud Satin Mood">Oud Satin Mood</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Bleu%20de%20Chanel%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Bleu de Chanel">Bleu de Chanel</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20CH%20212%20VIP%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by CH 212 VIP"><i>CH</i> 212 VIP</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20D%26G%20K%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by D&amp;G K"><i>D&amp;G</i> K</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Dior%20Sauvage%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Dior Sauvage"><i>Dior</i> Sauvage</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Dior%20Sauvage%20Elexir%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Dior Sauvage Elexir"><i>Dior</i> Sauvage Elexir</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Gucci%20Oud%20Intense%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Gucci Oud Intense"><i>Gucci</i> Oud Intense</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20J.%20Bogart%20Siver%20Scents%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by J. Bogart Siver Scents"><i>J. Bogart</i> Siver Scents</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20JP%20Gaulter%20Le%20Male%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by JP Gaulter Le Male"><i>JP Gaulter</i> Le Male</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20JP%20Gaulter%20Ultra%20Male%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by JP Gaulter Ultra Male"><i>JP Gaulter</i> Ultra Male</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20L%E2%80%99Eau%20de%20Issey%20Miyake%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by L’Eau de Issey Miyake">L’Eau de Issey Miyake</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Paco%20Rabanne%20Black%20XS%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Paco Rabanne Black XS"><i>Paco Rabanne</i> Black XS</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Paco%20Rabanne%20Invictus%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Paco Rabanne Invictus"><i>Paco Rabanne</i> Invictus</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Paco%20Rabanne%20One%20Million%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Paco Rabanne One Million"><i>Paco Rabanne</i> One Million</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Ted%20Lapidus%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Ted Lapidus">Ted Lapidus</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Terre%20de%20Hermes%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Terre de Hermes">Terre de Hermes</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Tom%20Ford%20Black%20Orchid%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Tom Ford Black Orchid"><i>Tom Ford</i> Black Orchid</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Tom%20Ford%20Oud%20Wood%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Tom Ford Oud Wood"><i>Tom Ford</i> Oud Wood</a></li>
-          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20do%20you%20have%20a%20scent%20inspired%20by%20Versace%20Dylan%20Blue%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp about a scent inspired by Versace Dylan Blue"><i>Versace</i> Dylan Blue</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Aramis%20900%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Aramis 900"><i>Aramis</i> 900</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Aramis%20New%20West%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Aramis New West"><i>Aramis</i> New West</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Azzaro%20Most%20Wanted%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Azzaro Most Wanted"><i>Azzaro</i> Most Wanted</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Azzaro%20Wanted%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Azzaro Wanted"><i>Azzaro</i> Wanted</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Armani%20Profundo%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Armani Profundo"><i>Armani</i> Profundo</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Baccarat%20Rouge%20540%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Baccarat Rouge 540"><i>Baccarat</i> Rouge 540</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Oud%20Satin%20Mood%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Oud Satin Mood">Oud Satin Mood</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Bleu%20de%20Chanel%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Bleu de Chanel">Bleu de Chanel</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20CH%20212%20VIP%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by CH 212 VIP"><i>CH</i> 212 VIP</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20D%26G%20K%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by D&amp;G K"><i>D&amp;G</i> K</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Dior%20Sauvage%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Dior Sauvage"><i>Dior</i> Sauvage</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Dior%20Sauvage%20Elexir%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Dior Sauvage Elexir"><i>Dior</i> Sauvage Elexir</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Gucci%20Oud%20Intense%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Gucci Oud Intense"><i>Gucci</i> Oud Intense</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20J.%20Bogart%20Siver%20Scents%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by J. Bogart Siver Scents"><i>J. Bogart</i> Siver Scents</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20JP%20Gaulter%20Le%20Male%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by JP Gaulter Le Male"><i>JP Gaulter</i> Le Male</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20JP%20Gaulter%20Ultra%20Male%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by JP Gaulter Ultra Male"><i>JP Gaulter</i> Ultra Male</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20L%E2%80%99Eau%20de%20Issey%20Miyake%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by L’Eau de Issey Miyake">L’Eau de Issey Miyake</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Paco%20Rabanne%20Black%20XS%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Paco Rabanne Black XS"><i>Paco Rabanne</i> Black XS</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Paco%20Rabanne%20Invictus%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Paco Rabanne Invictus"><i>Paco Rabanne</i> Invictus</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Paco%20Rabanne%20One%20Million%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Paco Rabanne One Million"><i>Paco Rabanne</i> One Million</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Ted%20Lapidus%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Ted Lapidus">Ted Lapidus</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Terre%20de%20Hermes%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Terre de Hermes">Terre de Hermes</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Tom%20Ford%20Black%20Orchid%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Tom Ford Black Orchid"><i>Tom Ford</i> Black Orchid</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Tom%20Ford%20Oud%20Wood%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Tom Ford Oud Wood"><i>Tom Ford</i> Oud Wood</a></li>
+          <li><a class="index-chip" href="https://wa.me/27734338607?text=Hello%20Arlex%20Scents%2C%20which%20Arlex%20scent%20is%20your%20version%20inspired%20by%20Versace%20Dylan%20Blue%3F%20Please%20confirm%20the%20size%2C%20price%20and%20availability." target="_blank" rel="noreferrer" aria-label="Ask Arlex on WhatsApp which Arlex generic is inspired by Versace Dylan Blue"><i>Versace</i> Dylan Blue</a></li>
         </ul>
       </div>
     </div>
 
-    <p class="fineprint reveal" style="margin-top:var(--sp-8)">Every name above describes a <em>scent profile only</em>. Arlex Scents has no affiliation with the brand owners, designers or manufacturers listed, and does not wish to confuse or mislead any customer &mdash; all Arlex scents are upmarket generics. Stock changes; please confirm availability, size and price with Arlex.</p>
+    <p class="fineprint reveal" style="margin-top:var(--sp-8)">All third-party names, marks and product names shown above are the property of their respective owners and are used here in good faith, descriptively and comparatively only, to indicate the <em>type</em> of scent profile an Arlex generic is inspired by. Arlex Scents has no affiliation with the brand owners, designers or manufacturers mentioned, and does not wish to confuse or mislead any customer &mdash; all Arlex scents are upmarket generics sold under the Arlex name. Stock changes; please confirm availability, size and price with Arlex.</p>
   </div>
 </section>
 
@@ -2069,25 +2104,52 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
       <div class="stack-lg reveal">
         <span class="eyebrow">Customer stories</span>
         <h2 class="display display--lg" id="rev-h">Wear it. Love it.<br>Tell the story.</h2>
-        <p class="lede">Verified customer reviews will live here once approved. We haven’t invented ratings or testimonials.</p>
+        <p class="lede">Thirty-four years of people walking back into Lemontree Mall to say “that one — the same again.” Here’s the kind of thing they tell Thembie.</p>
         <a class="btn btn--line" href="https://www.facebook.com/arlexperfumesonlineshop/?locale=ps_AF" target="_blank" rel="noreferrer">
           <svg width="17" height="17" aria-hidden="true"><use href="#i-fb"/></svg> Visit Arlex on Facebook
         </a>
       </div>
 
-      <div class="review-grid reveal" style="--delay:120ms">
-        <article class="review-card">
-          <div class="review-card__stars" aria-hidden="true">
-            <svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg><svg width="16" height="16"><use href="#i-star"/></svg>
-          </div>
-          <blockquote>“Add a verified customer quote here.”</blockquote>
-          <cite>Approved customer name</cite>
-        </article>
-        <article class="review-card review-card--note">
-          <span class="badge badge--draft">Social proof ready</span>
-          <h3>Replace this card with an approved Facebook review or customer photo.</h3>
-          <p class="fineprint">Nothing here is published until Arlex verifies and approves it.</p>
-        </article>
+      <div class="reveal" style="--delay:120ms">
+        <div class="review-sample">
+          <span class="badge badge--draft">Sample layout</span>
+          <p>Illustrative copy showing how approved reviews will look. Swap each card for a real, verified customer review before launch.</p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-card__stars" role="img" aria-label="5 out of 5">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg>
+            </div>
+            <span class="review-card__scent">Magnifica</span>
+            <blockquote>“I put it on at six in the morning and I could still smell it on my collar driving home. That never happens to me.”</blockquote>
+            <cite>Sample copy &middot; replace with an approved customer</cite>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" role="img" aria-label="5 out of 5">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg>
+            </div>
+            <span class="review-card__scent">Theodore</span>
+            <blockquote>“I walked in not knowing what I wanted. Thembie asked two questions, handed me one bottle, and that was it.”</blockquote>
+            <cite>Sample copy &middot; replace with an approved customer</cite>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" role="img" aria-label="5 out of 5">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg><svg width="15" height="15" aria-hidden="true"><use href="#i-star-f"/></svg>
+            </div>
+            <span class="review-card__scent">Mama Mia</span>
+            <blockquote>“My sister asked what I was wearing before I’d even taken my coat off. I’ve sent three people to that shop since.”</blockquote>
+            <cite>Sample copy &middot; replace with an approved customer</cite>
+          </article>
+
+          <article class="review-card review-card--note">
+            <span class="badge badge--draft">Social proof ready</span>
+            <h3>Drop in a real Facebook review or a customer photo here.</h3>
+            <p class="fineprint">Nothing on this page is published as a genuine review until Arlex has the customer’s words and their permission to use them.</p>
+          </article>
+        </div>
       </div>
     </div>
   </div>
@@ -2230,7 +2292,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
             Are these original designer perfumes? <span class="faq__icon" aria-hidden="true"></span>
           </button></h3>
           <div class="faq__panel" id="faq-p5" role="region" aria-labelledby="faq-t5">
-            <div>No. “Inspired by” references describe an independent fragrance profile and do not imply affiliation with the referenced brand.</div>
+            <div>No, and we never pretend otherwise. The designer names we reference are some of the world’s great original fragrances, and those names belong to the houses that created them. Arlex makes its own upmarket generic — an independent oil-based interpretation of a scent profile — bottled and sold under an Arlex name like Magnifica or Theodore. We’re not affiliated with, licensed by or endorsed by any of those houses, and we don’t copy anyone’s bottle or packaging.</div>
           </div>
         </div>
       </div>
@@ -2285,7 +2347,7 @@ img[data-fade]{transition:opacity var(--dur-3) var(--ease-out)}
     </div>
   </div>
 
-  <p class="legal">Arlex Scents is an independent fragrance retailer. “Inspired by” references describe scent profiles only and do not imply designer-brand affiliation. Product details, pricing and availability must be confirmed with Arlex.</p>
+  <p class="legal">Arlex Scents is an independent South African fragrance manufacturer and retailer of upmarket generics. Designer names shown on this site identify the original fragrances whose scent profiles our own products interpret; all such names and trade marks are the property of their respective owners, are used descriptively and comparatively, and do not imply affiliation, licensing or endorsement. Arlex products are sold only under Arlex names. Product details, pricing and availability must be confirmed with Arlex.</p>
 
   <div class="site-footer__bottom">
     <span>© <span id="year">2026</span> Arlex Scents</span>
